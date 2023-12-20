@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube</title>
+</head>
+<style>
+    ::-webkit-scrollbar{
+        display: none;
+    }
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+        margin: 0%;
+        padding: 0%;
+    }
+    .screen{
+        margin: auto;
+        padding: 10px;
+        width: 350px;
+        height: 96vh;
+        border: 2px solid;
+        border-radius: 10px ;
+        overflow: auto;
+    }
+    .home-page{
+        height: 92vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        position: relative;
+    }
+    .home-page header{
+        display: flex;
+        flex-direction: row;
+        place-content: space-between;
+    }
+    .home-page .explore-more{
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+    }
+    .home-page .shortcuts{
+        /* width:calc(100%-5); */
+        /* border: 1px solid; */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        overflow-x: auto;
+    }
+    .home-page .shortcuts a{
+        text-decoration: none;
+        color: rgb(27, 27, 27);
+        background-color: rgb(226, 225, 225);
+        padding: 7px;
+        margin: 5px;
+        font-size: 10pt;
+        font-weight: 650;
+        text-wrap: nowrap;
+        border-radius: 7px;
+    }
+    .feed{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .feed .caption{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 9pt;
+    }
+    .feed .caption .description{
+        display: flex;
+        flex-direction: column;
+        text-overflow: ellipsis;
+    }
+    .feed .caption .description label{
+        font-size: 8pt;
+    }
+
+
+    .screen .navigation{
+        display: flex;
+        flex-direction: row;
+        place-content: space-around;
+        align-items: center;
+        padding: 5px;
+    }
+    video{
+        cursor: pointer;
+        background-color: rgb(207, 209, 209);
+    }
+    img{
+        cursor: pointer;
+    }
+    .feed .shorts{
+        display: flex;
+        flex-direction: row;
+        height: 150px;
+        overflow-x: auto;
+    }
+    .feed .shorts video{
+        height: 138px;
+        width: 100px;
+        border-radius: 10px;
+        margin: 5px;
+    }
+
+    @media screen and (max-width:600px) {
+        .screen{
+            width: 95%;
+            border: none;
+        }
+    }
+</style>
+<body>
+    <main>
+        <div class="screen">
+            <div class="home-page">
+                <header>
+                    <div class="logo">
+                        <img src="icons/YoutubelogoPNGimage.png" alt="" width="100px">
+                    </div>
+                    <div class="explore-more">
+                        <img src="icons/cast.png" alt="" width="25px">
+                        <img src="icons/bell.png" alt="" width="25px">
+                        <img src="icons/search (1).png" alt="" width="25px">
+                    </div>
+                </header>
+                <div class="shortcuts">
+                    <a href="#">All</a>
+                    <a href="#">HTML</a>
+                    <a href="#">Live</a>
+                    <a href="#">Data Structures</a>
+                    <a href="#">Gaming</a>
+                    <a href="#">C++</a>
+                    <a href="#">Python</a>
+                </div>
+                <section class="feed">
+                    <!-- video 1 -->
+                    <video src="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" poster="assets/tech-burner-poster.jpg">Error: Video not supported</video>
+                    <div class="caption">
+                        <div class="channel-img"><img src="assets/tech-burner-channel-img.jpg" alt="" style="width: 40px; border-radius: 50%;"></div>
+                        <div class="description">
+                            <b>We Clicked a 30,000 MegaPixel Photo with Smartphone !</b>
+                            <label for="channel-name">Tech Burner</label>
+                        </div>
+                    </div>
+                    <!-- shorts -->
+                    <div class="shorts">
+                        <video src="https://player.vimeo.com/external/500628042.sd.mp4?s=1aef9b2062713668cff84486e90ed511329cc31e&profile_id=165&oauth2_token_id=57447761"></video>
+                        <video src="https://player.vimeo.com/external/555180605.hd.mp4?s=4d56595a8fc92cc6a06dfad329d4d940b8b056b1&profile_id=174&oauth2_token_id=57447761"></video>
+                        <video src="https://player.vimeo.com/external/403663448.hd.mp4?s=4a7424f2792c038e3277e332b013326989a94fca&profile_id=174&oauth2_token_id=57447761"></video>
+                        <video src="https://player.vimeo.com/external/500628042.sd.mp4?s=1aef9b2062713668cff84486e90ed511329cc31e&profile_id=165&oauth2_token_id=57447761"></video>
+                        <video src="https://player.vimeo.com/external/555180605.hd.mp4?s=4d56595a8fc92cc6a06dfad329d4d940b8b056b1&profile_id=174&oauth2_token_id=57447761"></video>
+                        <video src="https://player.vimeo.com/external/403663448.hd.mp4?s=4a7424f2792c038e3277e332b013326989a94fca&profile_id=174&oauth2_token_id=57447761"></video>
+                    </div>
+                    <!-- end of the shorts -->
+                    <!-- video 2 -->
+                    <video src="https://player.vimeo.com/external/504104342.sd.mp4?s=8703b033ad20d54a248d515a560fd6e675e179cf&profile_id=164&oauth2_token_id=57447761" width="100%" >Error: Video not supported</video>
+                    <div class="caption">
+                        <div class="channel-img"><img src="assets/tech-burner-channel-img.jpg" alt="" style="width: 40px; border-radius: 50%;"></div>
+                        <div class="description">
+                            <b>We Clicked a 30,000 MegaPixel Photo with Smartphone !</b>
+                            <label for="channel-name">Tech Burner</label>
+                        </div>
+                    </div>
+                    <!-- video 3 -->
+                    <video src="https://player.vimeo.com/external/423126565.sd.mp4?s=c86e78954491d94a298c5e0d9d648496a6d0bbcf&profile_id=164&oauth2_token_id=57447761" width="100%">Error: Video not supported</video>
+                    <div class="caption">
+                        <div class="channel-img"><img src="assets/tech-burner-channel-img.jpg" alt="" style="width: 40px; border-radius: 50%;"></div>
+                        <div class="description">
+                            <b>We Clicked a 30,000 MegaPixel Photo with Smartphone !</b>
+                            <label for="channel-name">Tech Burner</label>
+                        </div>
+                    </div>
+                    <!-- video 4 -->
+                    <video src="https://player.vimeo.com/external/397998469.sd.mp4?s=6a5eb5949146713a6fc5b5b6ca35b02adf675aa8&profile_id=164&oauth2_token_id=57447761" width="100%">Error: Video not supported</video>
+                    <div class="caption">
+                        <div class="channel-img"><img src="assets/tech-burner-channel-img.jpg" alt="" style="width: 40px; border-radius: 50%;"></div>
+                        <div class="description">
+                            <b>We Clicked a 30,000 MegaPixel Photo with Smartphone !</b>
+                            <label for="channel-name">Tech Burner</label>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="navigation">
+                <img src="icons/homepage.png" alt="" width="25px">
+                <img src="icons/shorts.png" alt="" width="30px">
+                <img src="icons/add (1).png" alt="" width="25px">
+                <img src="icons/subscription.png" alt="" width="25px">
+                <img src="assets/user.jpg" alt="" width="25px" style="border-radius: 50%;">
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+<script>
+    const videos = document.querySelectorAll("video");
+    for(const video of videos){
+        let flag = false; //used to play and pause the current video
+        video.addEventListener("click",function(){
+            if(flag){
+                video.pause();
+                flag = false;
+            }
+            else
+            {
+                video.play();
+                flag = true;
+            }
+        })
+    }
+</script>
